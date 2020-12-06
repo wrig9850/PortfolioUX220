@@ -1,5 +1,6 @@
 fs = require('fs');
 
+// folder of package.json for `npm start`
 const sDir = process.cwd();
 
 const fGenerate = () => {
@@ -26,15 +27,17 @@ const fGenerate = () => {
 
 // generate all html from all js files in the project folder the first time
 fGenerate();
-// generate in 3 seconds if there is a change
 
 fWatcher = (sNewDir)=>{
   const stats = fs.statSync(`${sDir}/index.html`);
   fs.readdirSync(sNewDir).forEach((sFile) => {
     const fStats = fs.statSync(`${sNewDir}/${sFile}`);
     if(fStats.isDirectory()){
+      // recurse into directory
       fWatcher(`${sNewDir}/${sFile}`);
     } else if(fStats.mtimeMs > stats.mtimeMs){
+      // file is changed so we regenerate everything. It is quick and I 
+      // couldn't think of a good way to match dependencies
       fGenerate();
       console.log(`change to ${sNewDir}/${sFile}`);
       return;      
@@ -42,6 +45,7 @@ fWatcher = (sNewDir)=>{
   });
 }
 
+// generate in 3 seconds if there is a change
 setInterval(()=>{
   fWatcher(sDir);
 }, 3000);
