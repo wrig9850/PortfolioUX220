@@ -20,6 +20,6 @@ module.exports = class extends Page {
     ${new Footer().render()}
     </body>
 </html>
-        `
+        `;
     }
 }

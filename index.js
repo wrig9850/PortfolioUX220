@@ -16,10 +16,10 @@ module.exports = class extends Page {
     <body>
     ${new Header().render()}
     ${new Nav().render()}
-    ${this.requireMarked('pages/index.md')}
+    ${this.requireMarked('README.md')}
     ${new Footer().render()}
     </body>
 </html>
-        `
+        `;
     }
 }
