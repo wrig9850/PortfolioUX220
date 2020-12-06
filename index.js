@@ -16,7 +16,7 @@ module.exports = class extends Page {
     <body>
     ${new Header().render()}
     ${new Nav().render()}
-    ${this.requireMarked('README.md')}
+    ${this.requireMarked('pages/index.md')}
     ${new Footer().render()}
     </body>
 </html>
