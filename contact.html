@@ -1,24 +1,15 @@
 
 <!DOCTYPE html>
+
 <html lang="en" class="contact">
     <head>
         <!-- Viewport for responsiveness on other devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    </head>
     
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/main.css" />
-        
-    <title>Contact</title>
-    </head>
-    <body>
-    
-        <!-- Contact Header -->
-        <head>
-            <h1 style="color:#dddddd";>
-             Contact Me Here...
-             </h1>
-         </head>
-    
+
 <div class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -36,6 +27,23 @@
         </ul>
     </div>
 </div>
+     
+    <!-- Contact Header -->
+    <header>
+        <h1 style="color:#dddddd";>
+        Contact Me Here...</h1>
+    </header>
+    
+    <title>Contact</title>
+    <body>
+        <!-- Contact Emailing Form -->
+        <form id="contact-form" action="http://localhost:3002/send" method="POST">
+            <h1 style="color:#dddddd";>Please Fill Out This Form To Get In Touch</h1>
+            <input type="text" name="name" placeholder="Enter your name" required/><br />
+            <input type="email" name="email" placeholder="Enter your email" required/><br />
+            <textarea name="message" placeholder="Enter your message" required></textarea><br />
+            <button type="submit">Send</button>
+        </form>
         
     <!--Contact page description-->
     <p>
