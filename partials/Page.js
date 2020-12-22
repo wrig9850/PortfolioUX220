@@ -3,7 +3,7 @@ const fs = require('fs')
 
 module.exports = class{
     constructor(){
-        this.sName = "Richard Hildred";
+        this.sName = "Mason Wright";
     }
     requireMarked(sFname){
         const sDir = process.cwd()

@@ -1,5 +1,3 @@
-/* your css here */
-
 footer {
     background-color: coral;
     color: white;
@@ -9,17 +7,24 @@ div.navbar-collapse {
     background-color: rgb(23, 192, 107);
 }
 
+/* Sets background colour, font size and font type */
 a.navbar-brand {
     background-color:rgb(23, 192, 107);
     font-size: 2.0em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Centers the body text as well as the form */
 body {
-    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: rosybrown;
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.7em;
 }
 
-
+/* Sets paragraph text to white */
 p {
     color: white;
 }
